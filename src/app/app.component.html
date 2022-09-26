@@ -1,3 +1,14 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<div class="flex flex-col h-full w-3/4 min-h-screen justify-center mx-auto items-center gap-y-24 my-16">
+  <div class="flex flex-col w-full items-center justify-center gap-8">
+    <div class="rounded-full bg-primary flex flex-row items-center justify-center" style="width: 75px; height: 75px;"></div>
+    <h1 class="text-center">You have joined the program!</h1>
+    <p class="text-center w-full md:w-1/2">You have joined the waiting list, out team will review your application and get back to you as soon as possible!</p>
+    <button class="">DOWNLOAD APP</button>
+  </div>
+  <div class="flex flex-col gap-4">
+    <p class="text-secondary pl-4">Additional resources</p>
+    <div class="flex flex-col md:flex-row gap-8">
+      <app-card class="w-full md:w-1/2 bg-body-contrast p-4 rounded-md" *ngFor="let additionalResource of additionalResources" [description]="additionalResource.description" [links]="additionalResource.links"></app-card>
+    </div>
+  </div>
+</div>

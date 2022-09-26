@@ -1,0 +1,6 @@
+<div class="w-full flex flex-col gap-6">
+  <p class="text-secondary">{{description}}</p>
+  <div class="w-full flex flex-col gap-4">
+    <a class="uppercase" *ngFor="let link of links" [href]="link.url">{{link.title}}</a>
+  </div>
+</div>
